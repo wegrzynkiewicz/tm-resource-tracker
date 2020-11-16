@@ -3,6 +3,6 @@
   "short_name": "TM Resource Tracker",
   "orientation": "portrait-primary",
   "display": "fullscreen",
-  "start_url": "/index.html",
+  "start_url": "/tm-resource-tracker/index.html",
   "background_color": "#000000"
 }
