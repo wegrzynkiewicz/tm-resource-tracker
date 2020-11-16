@@ -100,7 +100,7 @@ module.exports = {
             publicPath: './',
             short_name: 'TM Resource Tracker',
             name: 'TM Resource Tracker',
-            start_url: '/index.html',
+            start_url: '/tm-resource-tracker/index.html',
             crossorigin: 'anonymous',
             fingerprints: true,
             icons: [
