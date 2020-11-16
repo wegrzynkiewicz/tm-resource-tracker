@@ -111,7 +111,7 @@ module.exports = {
                 // }
             ],
             display: 'fullscreen',
-            orientation: 'portrait-primary'
+            orientation: 'portrait'
         }),
     ],
     watchOptions: {
