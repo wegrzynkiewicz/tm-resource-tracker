@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg372">
+  <defs
+     id="defs366">
+    <linearGradient
+       id="linearGradient1107">
+      <stop
+         style="stop-color:#fee800;stop-opacity:1;"
+         offset="0"
+         id="stop1103" />
+      <stop
+         style="stop-color:#fecf00;stop-opacity:1;"
+         offset="1"
+         id="stop1105" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1077">
+      <stop
+         id="stop1071"
+         offset="0"
+         style="stop-color:#ffef00;stop-opacity:1;" />
+      <stop
+         style="stop-color:#f8ae01;stop-opacity:1"
+         offset="1"
+         id="stop1073" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1689">
+      <stop
+         style="stop-color:#363634;stop-opacity:1;"
+         offset="0"
+         id="stop1685" />
+      <stop
+         style="stop-color:#181818;stop-opacity:1;"
+         offset="1"
+         id="stop1687" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1781">
+      <stop
+         style="stop-color:#76bc38;stop-opacity:1;"
+         offset="0"
+         id="stop1777" />
+      <stop
+         style="stop-color:#439f21;stop-opacity:1;"
+         offset="1"
+         id="stop1779" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient1847"
+       id="radialGradient1849"
+       cx="41.638721"
+       cy="251.56396"
+       fx="41.638721"
+       fy="251.56396"
+       r="26.068449"
+       gradientTransform="matrix(2.0052474,0,0,2.0056655,-250.93783,-427.58869)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient1847">
+      <stop
+         style="stop-color:#931880;stop-opacity:1;"
+         offset="0"
+         id="stop1843" />
+      <stop
+         style="stop-color:#801893;stop-opacity:1;"
+         offset="1"
+         id="stop1845" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1">
+    <g
+       id="g1564"
+       transform="matrix(0.88111642,0,0,0.88111568,197.54281,-17.814592)"
+       style="stroke-width:1.13492">
+      <path
+         style="opacity:1;vector-effect:none;fill:#131111;fill-opacity:1;fill-rule:nonzero;stroke:#762c83;stroke-width:2.26302;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m -220.47645,23.937261 h 106.06906 V 129.99164 h -106.06906 z"
+         id="rect1596-0-4-0-3" />
+      <path
+         style="opacity:1;vector-effect:none;fill:url(#radialGradient1849);fill-opacity:1;fill-rule:nonzero;stroke:#874997;stroke-width:2.94193;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m -218.41218,26.001815 h 101.94057 V 127.92705 h -101.94057 z"
+         id="rect1596-0-3-2-2-7" />
+      <path
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#874997;stroke-width:2.18381;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -189.81035,109.99666 19.48654,-28.234188 -10.14095,-16.133819 35.39387,-22.385674 -19.8842,28.234194 10.33979,16.738832 z"
+         id="path1851-0" />
+      <path
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#4d594d;stroke-width:0.826001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -189.81035,109.99666 19.48654,-28.234188 -10.14095,-16.133819 35.39387,-22.385679 -19.8842,28.234199 10.33979,16.738832 z"
+         id="path1851" />
+      <path
+         style="opacity:0.2106;fill:#d173c1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.26302;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M -222.37836,23.245616 V 73.88815 c 35.79137,6.988182 72.54086,6.69773 110.1338,0 V 23.245616 Z"
+         id="path1628-6-5-7" />
+      <path
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#121211;stroke-width:3.39453;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m -222.49878,21.915485 h 110.11371 V 132.01343 h -110.11371 z"
+         id="rect1596-1-1-6" />
+    </g>
+  </g>
+</svg>

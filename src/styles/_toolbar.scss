@@ -1,0 +1,56 @@
+.toolbar {
+  background: linear-gradient(to bottom, #d8782e 0%, #b26127 37%, #88441d 88%, #88441d 100%);
+  border-top: 1px solid #e4ab7e;
+  width: 100%;
+}
+
+.toolbar--container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.toolbar--buttons-group {
+  display: flex;
+}
+
+.toolbar--buttons {
+  display: flex;
+}
+
+.toolbar--button {
+  font-size: 20px;
+}
+
+.toolbar--button__modifier {
+  min-width: 44px;
+  margin: 8px 4px;
+}
+
+@media (orientation: landscape) {
+  .toolbar--buttons__minus {
+    order: 1
+  }
+  .toolbar--buttons__plus {
+    order: 2
+  }
+  .toolbar--container {
+    justify-content: center;
+  }
+  .toolbar--buttons__center {
+    position: absolute;
+  }
+  .toolbar--buttons-group {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  .toolbar--buttons-group {
+    flex-direction: column;
+  }
+}

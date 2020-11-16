@@ -1,0 +1,22 @@
+.resources {
+  height: 100%;
+  padding: 10px;
+}
+
+.resources--container {
+  display: flex;
+  height: 100%;
+}
+
+@media (orientation: portrait) {
+  .resources--container {
+    flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) {
+  .resources--container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

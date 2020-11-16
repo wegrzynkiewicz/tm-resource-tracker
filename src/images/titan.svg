@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg372">
+  <defs
+     id="defs366">
+    <linearGradient
+       id="linearGradient1107">
+      <stop
+         style="stop-color:#fee800;stop-opacity:1;"
+         offset="0"
+         id="stop1103" />
+      <stop
+         style="stop-color:#fecf00;stop-opacity:1;"
+         offset="1"
+         id="stop1105" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1077">
+      <stop
+         id="stop1071"
+         offset="0"
+         style="stop-color:#ffef00;stop-opacity:1;" />
+      <stop
+         style="stop-color:#f8ae01;stop-opacity:1"
+         offset="1"
+         id="stop1073" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient1689"
+       id="radialGradient1691"
+       cx="171.67525"
+       cy="43.658852"
+       fx="171.67525"
+       fy="43.658852"
+       r="23.331839"
+       gradientTransform="matrix(2.2304377,0,0,2.2310887,-550.36078,-20.442297)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient1689">
+      <stop
+         style="stop-color:#363634;stop-opacity:1;"
+         offset="0"
+         id="stop1685" />
+      <stop
+         style="stop-color:#181818;stop-opacity:1;"
+         offset="1"
+         id="stop1687" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1">
+    <g
+       id="g1564"
+       transform="matrix(0.88111642,0,0,0.88111568,197.54281,-17.814592)"
+       style="stroke-width:1.13492">
+      <path
+         style="opacity:1;vector-effect:none;fill:#aa794e;fill-opacity:1;fill-rule:nonzero;stroke:#333333;stroke-width:2.18231;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m -220.47788,23.936146 h 106.05606 V 129.99277 h -106.05606 z"
+         id="rect1596-0-4" />
+      <path
+         style="opacity:1;vector-effect:none;fill:url(#radialGradient1691);fill-opacity:1;fill-rule:nonzero;stroke:#666666;stroke-width:2.18231;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="M -218.41385,26.000757 H -116.4858 V 127.92817 h -101.92805 z"
+         id="rect1596-0-3-2" />
+      <path
+         id="path1700-7"
+         d="m -166.71978,38.5105 -12.31828,23.719297 -26.23428,3.146698 18.41659,19.223147 -5.15784,26.297688 23.70111,-11.838556 23.04121,13.107996 -3.7676,-26.542664 19.40136,-18.194313 -26.03022,-4.563922 z m -0.37725,14.390259 7.10954,15.672652 16.75331,2.934764 -12.4864,11.713257 2.4251,17.078318 -14.82919,-8.434771 -1.47999,0.737005 -13.77205,6.878618 3.32141,-16.920675 -11.85155,-12.369372 16.88143,-2.025068 z"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffec02;fill-opacity:1;fill-rule:nonzero;stroke:#333333;stroke-width:2.14838;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffec02;fill-opacity:1;fill-rule:nonzero;stroke:#e8a42e;stroke-width:0.565365;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="m -166.7198,38.510502 -12.31826,23.719298 -26.23428,3.146701 18.41659,19.223141 -5.15784,26.297688 23.70109,-11.838556 23.04121,13.107996 -3.76761,-26.542664 19.40136,-18.194308 -26.03019,-4.563927 z m -0.37725,14.390257 7.10956,15.672657 16.75331,2.934759 -12.4864,11.713257 2.42508,17.078318 -14.82917,-8.434771 -1.47999,0.737015 -13.77205,6.878608 3.32141,-16.920669 -11.85155,-12.369378 16.88143,-2.025068 z"
+         id="path1700" />
+      <path
+         style="opacity:0.28;fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.598343px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -221.42501,22.539894 v 46.95919 c 35.08176,6.479913 71.10272,6.210591 107.95041,0 v -46.95919 z"
+         id="path1628-6" />
+      <path
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3.39219;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m -222.49994,21.914318 h 110.10018 V 132.0146 h -110.10018 z"
+         id="rect1596-1" />
+    </g>
+  </g>
+</svg>

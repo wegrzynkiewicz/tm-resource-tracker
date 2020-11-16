@@ -1,0 +1,16 @@
+@import "variables";
+
+.bg__production {
+  background-image: url('../images/production.svg');
+}
+
+
+.bg__points {
+  background-image: url('../images/tp.png');
+}
+
+@each $name, $options in $resources {
+  .bg__#{$name} {
+    background-image: url("../images/#{$name}.svg");
+  }
+}

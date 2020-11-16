@@ -1,0 +1,24 @@
+.number {
+  background: linear-gradient(to bottom, #846c50 0%, #b79c7c 29%, #b79c7c 70%, #fee7cd 100%);
+  border-image-source: linear-gradient(to bottom, #bdb0a6 0%, #230906 100%);
+  border-image-slice: 1;
+  border-width: 2px;
+  font-family: Goldman, monospace;
+  outline: none;
+  text-align: center;
+  user-select: none;
+  padding: 0 2px;
+}
+
+.number__counter {
+  font-size: 28px;
+  margin: 1px 3px;
+  max-width: 74px;
+}
+
+@media (orientation: landscape) {
+  .number__counter {
+    font-size: 24px;
+    max-width: 54px;
+  }
+}
