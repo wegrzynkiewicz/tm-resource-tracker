@@ -20,7 +20,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '/',
+                            publicPath: './',
                         },
                     },
                     "css-loader",
@@ -90,14 +90,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             cache: false,
             inject: 'body',
-            publicPath: '/',
+            publicPath: './',
             scriptLoading: 'defer',
             template: 'src/index.ejs',
         }),
         new MiniCssExtractPlugin(),
         new WebpackPwaManifest({
             background_color: '#000000',
-            publicPath: '/',
+            publicPath: './',
             short_name: 'TM Resource Tracker',
             name: 'TM Resource Tracker',
             start_url: '/index.html',
