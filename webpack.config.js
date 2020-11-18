@@ -89,7 +89,7 @@ module.exports = {
         new CleanWebpackPlugin({}),
         new HtmlWebpackPlugin({
             cache: false,
-            inject: 'body',
+            inject: 'head',
             publicPath: './',
             scriptLoading: 'defer',
             template: 'src/index.ejs',

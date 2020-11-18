@@ -7,12 +7,16 @@ function getCounterValue(name) {
 }
 
 function setCounterValue(name, value) {
-    document.getElementById(name).value = value;
+    const element = document.getElementById(name);
+    if (element) {
+        element.value = value;
+        localStorage.setItem(name, value);
+    }
 }
 
 function addCounterValue(resource, value) {
     const stateValue = getCounterValue(`state_${resource}`);
-    document.getElementById(`state_${resource}`).value = stateValue + value;
+    setCounterValue(`state_${resource}`, stateValue + value);
 }
 
 function increaseStateByProduction(resource) {
@@ -57,7 +61,7 @@ const resources = {
         restoreState,
         increaseStateByProduction(resource) {
             const stateValue = getCounterValue(`state_${resource}`);
-            addCounterValue(resource, -stateValue);
+            setCounterValue(`state_${resource}`, -stateValue);
             increaseStateByProduction(resource)
             addCounterValue('heat', stateValue);
         }
@@ -75,9 +79,6 @@ window.setSelected = function setSelected(event, type, resource) {
     selectedItem = this;
     selectedItem.classList.add('resource--item__outline');
     selectedCounterId = `${type}_${resource}`;
-    console.log(arguments);
-    console.log(selectedItem);
-    console.log(selectedItem);
 }
 
 window.setValue = function (event, value) {
@@ -86,7 +87,7 @@ window.setValue = function (event, value) {
     }
 
     const stateValue = getCounterValue(selectedCounterId);
-    document.getElementById(selectedCounterId).value = stateValue + value;
+    setCounterValue(selectedCounterId, stateValue + value);
 }
 
 window.produce = function (event) {
@@ -100,3 +101,10 @@ window.resetStates = function (event) {
         resource.restoreState(name);
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    for (const [name] of Object.entries(resources)) {
+        setCounterValue(`state_${name}`, localStorage.getItem(`state_${name}`));
+        setCounterValue(`production_${name}`, localStorage.getItem(`production_${name}`));
+    }
+});

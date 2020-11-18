@@ -8,7 +8,7 @@
     <title>TM Resource Tracker</title>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Goldman&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%2B-"/>
-<link href="./main.css" rel="stylesheet"><link rel="manifest" href="./manifest.bb45d2a03119343041627efd27b27101.json" crossorigin="anonymous" /></head>
+<script defer src="./main.js"></script><link href="./main.css" rel="stylesheet"><link rel="manifest" href="./manifest.bb45d2a03119343041627efd27b27101.json" crossorigin="anonymous" /></head>
 <body>
 <div class="main">
 
@@ -26,6 +26,10 @@
         <div class="resources--container">
             <div class="resource resource__points">
                 <div class="resource--container">
+                    <div class="resource--item">
+                    </div>
+                    <div class="resource--item resource--icon bg__points">
+                    </div>
                     <div onclick="setSelected.call(this, event, 'state', 'points')"
                          class="resource--item resource--buttons resource--state">
                         <label>
@@ -33,24 +37,11 @@
                                    class="number number__counter" name="resource" value="20" readonly/>
                         </label>
                     </div>
-                    <div class="resource--item resource--icon bg__points">
-                    </div>
-                    <div class="resource--item">
-                    </div>
                 </div>
             </div>
             
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', 'gold')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_gold"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__gold">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', 'gold')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -62,20 +53,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="resource--item resource--icon bg__gold">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', 'gold')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_gold"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
+                        </div>
                     </div>
                 </div>
             
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', 'steel')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_steel"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__steel">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', 'steel')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -87,20 +78,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="resource--item resource--icon bg__steel">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', 'steel')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_steel"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
+                        </div>
                     </div>
                 </div>
             
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', 'titan')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_titan"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__titan">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', 'titan')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -112,20 +103,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="resource--item resource--icon bg__titan">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', 'titan')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_titan"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
+                        </div>
                     </div>
                 </div>
             
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', 'plant')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_plant"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__plant">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', 'plant')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -137,20 +128,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="resource--item resource--icon bg__plant">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', 'plant')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_plant"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
+                        </div>
                     </div>
                 </div>
             
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', 'energy')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_energy"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__energy">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', 'energy')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -162,20 +153,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="resource--item resource--icon bg__energy">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', 'energy')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_energy"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
+                        </div>
                     </div>
                 </div>
             
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', 'heat')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_heat"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__heat">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', 'heat')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -186,6 +177,15 @@
                                     </label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="resource--item resource--icon bg__heat">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', 'heat')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_heat"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -232,5 +232,5 @@
         </div>
     </div>
 </div>
-<script defer src="./main.js"></script></body>
+</body>
 </html>

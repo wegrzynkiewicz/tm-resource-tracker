@@ -1,3 +1,72 @@
+.resource--container {
+  align-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+.resource {
+  flex-basis: 14.2857142857%;
+}
+
+.resource--item {
+  flex-basis: 33.333333%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+}
+
+.resource--item__outline {
+  border-color: #e8e8e8 !important;
+}
+
+.resource--item__production {
+  padding: 4px;
+}
+
+.resource--icon {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 90%;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.resource--buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100%;
+  padding: 4px 0;
+}
+
+.resource--production-bg {
+  border-image-source: linear-gradient(to top, #bdb0a6 0%, #483f3e 100%);
+  border-image-slice: 1;
+  border-style: inset;
+  border-width: 2px;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, #7f4623 0%, #935e2c 100%);
+  height: 100%;
+  padding: 3px;
+  width: 100%;
+}
+
+.resource--production {
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  height: 100%;
+}
+
+@media (orientation: landscape) {
+  .resource--container {
+    flex-direction: column;
+  }
+}
 .navbar {
   background: linear-gradient(to bottom, #d8782e 0%, #b26127 37%, #88441d 88%, #88441d 100%);
   border-bottom: 1px solid #482917;
@@ -63,6 +132,7 @@
   border-width: 3px;
   border-style: solid;
   border-color: transparent;
+  width: 100%;
 }
 
 .resource--item__outline {

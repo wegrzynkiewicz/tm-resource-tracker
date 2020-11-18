@@ -26,6 +26,10 @@
         <div class="resources--container">
             <div class="resource resource__points">
                 <div class="resource--container">
+                    <div class="resource--item">
+                    </div>
+                    <div class="resource--item resource--icon bg__points">
+                    </div>
                     <div onclick="setSelected.call(this, event, 'state', 'points')"
                          class="resource--item resource--buttons resource--state">
                         <label>
@@ -33,24 +37,11 @@
                                    class="number number__counter" name="resource" value="20" readonly/>
                         </label>
                     </div>
-                    <div class="resource--item resource--icon bg__points">
-                    </div>
-                    <div class="resource--item">
-                    </div>
                 </div>
             </div>
             <% for (const [resource,] of Object.entries(resources)) { %>
                 <div class="resource">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'state', '<%= resource %>')"
-                             class="resource--item resource--buttons resource--state">
-                            <label>
-                                <input id="state_<%= resource %>"
-                                       class="number number__counter" name="resource" value="0" readonly/>
-                            </label>
-                        </div>
-                        <div class="resource--item resource--icon bg__<%= resource %>">
-                        </div>
                         <div onclick="setSelected.call(this, event, 'production', '<%= resource %>')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
@@ -61,6 +52,15 @@
                                     </label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="resource--item resource--icon bg__<%= resource %>">
+                        </div>
+                        <div onclick="setSelected.call(this, event, 'state', '<%= resource %>')"
+                             class="resource--item resource--buttons resource--state">
+                            <label>
+                                <input id="state_<%= resource %>"
+                                       class="number number__counter" name="resource" value="0" readonly/>
+                            </label>
                         </div>
                     </div>
                 </div>
