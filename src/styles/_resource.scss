@@ -12,10 +12,17 @@
 
 .resource--item {
   flex-basis: 33.333333%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.resource--item__outline {
+  border-color: #e8e8e8 !important;
 }
 
 .resource--item__production {
-  padding: 4px 0;
+  padding: 4px;
 }
 
 .resource--icon {

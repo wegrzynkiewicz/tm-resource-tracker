@@ -42,8 +42,8 @@
 
 @media (orientation: landscape) {
   .number__counter {
-    font-size: 24px;
-    max-width: 54px;
+    font-size: 23px;
+    max-width: 56px;
   }
 }
 .resource--container {
@@ -60,10 +60,17 @@
 
 .resource--item {
   flex-basis: 33.333333%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.resource--item__outline {
+  border-color: #e8e8e8 !important;
 }
 
 .resource--item__production {
-  padding: 4px 0;
+  padding: 4px;
 }
 
 .resource--icon {
@@ -231,6 +238,6 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='100'%3e%3cdefs%3e%3cradialGradient xlink:href='%23a' id='b' cx='41.639' cy='251.564' fx='41.639' fy='251.564' r='26.068' gradientTransform='matrix(2.00525 0 0 2.00567 -250.938 -427.589)' gradientUnits='userSpaceOnUse'/%3e%3clinearGradient id='a'%3e%3cstop offset='0' stop-color='%23931880'/%3e%3cstop offset='1' stop-color='%23801893'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg stroke-width='1.135'%3e%3cpath d='M-220.476 23.937h106.069v106.055h-106.07z' fill='%23131111' stroke='%23762c83' stroke-width='2.263' paint-order='fill markers stroke' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3cpath d='M-218.412 26.002h101.94v101.925h-101.94z' fill='url(%23b)' stroke='%23874997' stroke-width='2.942' paint-order='fill markers stroke' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3cpath d='M-189.81 109.997l19.486-28.235-10.14-16.133 35.393-22.386-19.884 28.234 10.34 16.739z' fill='white' fill-rule='evenodd' stroke='%23874997' stroke-width='2.184' stroke-linecap='round' stroke-linejoin='round' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3cpath d='M-189.81 109.997l19.486-28.235-10.14-16.133 35.393-22.386-19.884 28.234 10.34 16.739z' fill='white' fill-rule='evenodd' stroke='%234d594d' stroke-width='.826' stroke-linecap='round' stroke-linejoin='round' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3cpath d='M1.602 2.667V47.29c31.536 6.158 63.917 5.902 97.04 0V2.667z' opacity='.211' fill='%23d173c1' fill-rule='evenodd'/%3e%3cpath d='M-222.499 21.915h110.114v110.098H-222.5z' fill='none' stroke='%23121211' stroke-width='3.395' paint-order='fill markers stroke' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3c/g%3e%3c/svg%3e");
 }
 
-.bg__warm {
+.bg__heat {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3e%3cg stroke-width='1.135'%3e%3cpath d='M-220.476 23.937h106.069v106.055h-106.07z' fill='%23e74517' stroke='%23e42314' stroke-width='2.263' paint-order='fill markers stroke' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3cpath d='M-218.412 26.002h101.94v101.925h-101.94z' fill='%23e74517' stroke='%23ec5c2d' stroke-width='2.942' paint-order='fill markers stroke' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3cpath d='M1.601 2.667V47.29c31.537 6.158 63.917 5.902 97.041 0V2.667z' opacity='.211' fill='%23ffcba7' fill-rule='evenodd'/%3e%3cg fill='%23fce72c' fill-rule='evenodd' stroke='%23ec5c2d' stroke-width='1.569' stroke-linejoin='round'%3e%3cpath d='M233.474 269.124l-.779-18.066-5.826-3.737 5.241-22.074.512 19.164 5.747 3.64zM246.914 269.124l-.78-18.066-5.826-3.737 5.241-22.074.512 19.164 5.748 3.64zM260.353 269.124l-.78-18.066-5.825-3.737 5.24-22.074.512 19.164 5.748 3.64z' transform='matrix(1.76686 0 0 1.792 -384.743 -394.907)'/%3e%3c/g%3e%3cg fill='%23fce72c' fill-rule='evenodd' stroke='%23b4150f' stroke-width='.521'%3e%3cpath d='M233.474 269.124l-.779-18.066-5.826-3.737 5.241-22.074.512 19.164 5.747 3.64zM246.914 269.124l-.78-18.066-5.826-3.737 5.241-22.074.512 19.164 5.748 3.64zM260.353 269.124l-.78-18.066-5.825-3.737 5.24-22.074.512 19.164 5.748 3.64z' transform='matrix(1.76686 0 0 1.792 -384.743 -394.907)'/%3e%3c/g%3e%3cpath d='M-222.499 21.915h110.114v110.098H-222.5z' fill='none' stroke='%23121211' stroke-width='3.395' paint-order='fill markers stroke' transform='matrix(.88112 0 0 .88112 197.543 -17.815)'/%3e%3c/g%3e%3c/svg%3e");
 }

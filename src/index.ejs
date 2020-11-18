@@ -15,7 +15,10 @@
     <div class="navbar">
         <div class="navbar--container">
             <div class="navbar--item navbar--logo">RESOURCE TRACKER</div>
-            <button class="navbar--item number navbar--button">RESET</button>
+            <button onclick="resetStates.call(this, event)"
+                    class="navbar--item number navbar--button">
+                RESET
+            </button>
             <button class="navbar--item number navbar--button">ABOUT</button>
         </div>
     </div>
@@ -23,9 +26,11 @@
         <div class="resources--container">
             <div class="resource resource__points">
                 <div class="resource--container">
-                    <div class="resource--item resource--buttons resource--state">
+                    <div onclick="setSelected.call(this, event, 'state', 'points')"
+                         class="resource--item resource--buttons resource--state">
                         <label>
-                            <input class="number number__counter" name="resource" value="0" readonly/>
+                            <input id="state_points"
+                                   class="number number__counter" name="resource" value="20" readonly/>
                         </label>
                     </div>
                     <div class="resource--item resource--icon bg__points">
@@ -37,18 +42,22 @@
             <% for (const [resource,] of Object.entries(resources)) { %>
                 <div class="resource">
                     <div class="resource--container">
-                        <div class="resource--item resource--buttons resource--state">
+                        <div onclick="setSelected.call(this, event, 'state', '<%= resource %>')"
+                             class="resource--item resource--buttons resource--state">
                             <label>
-                                <input class="number number__counter" name="resource" value="0" readonly/>
+                                <input id="state_<%= resource %>"
+                                       class="number number__counter" name="resource" value="0" readonly/>
                             </label>
                         </div>
                         <div class="resource--item resource--icon bg__<%= resource %>">
                         </div>
-                        <div class="resource--item resource--item__production">
+                        <div onclick="setSelected.call(this, event, 'production', '<%= resource %>')"
+                             class="resource--item resource--item__production">
                             <div class="resource--production-bg">
                                 <div class="resource--buttons bg__production">
                                     <label>
-                                        <input class="number number__counter" name="resource" value="0" readonly/>
+                                        <input id="production_<%= resource %>"
+                                               class="number number__counter" name="resource" value="0" readonly/>
                                     </label>
                                 </div>
                             </div>
@@ -62,18 +71,38 @@
         <div class="toolbar--container">
             <div class="toolbar--buttons-group">
                 <div class="toolbar--buttons toolbar--buttons__plus">
-                    <button class="number toolbar--button toolbar--button__modifier">+1</button>
-                    <button class="number toolbar--button toolbar--button__modifier">+5</button>
-                    <button class="number toolbar--button toolbar--button__modifier">+10</button>
+                    <button onclick="setValue.call(this, event, 1)"
+                            class="number toolbar--button toolbar--button__modifier">
+                        +1
+                    </button>
+                    <button onclick="setValue.call(this, event, 5)"
+                            class="number toolbar--button toolbar--button__modifier">
+                        +5
+                    </button>
+                    <button onclick="setValue.call(this, event, 10)"
+                            class="number toolbar--button toolbar--button__modifier">
+                        +10
+                    </button>
                 </div>
                 <div class="toolbar--buttons toolbar--buttons__minus">
-                    <button class="number toolbar--button toolbar--button__modifier">-1</button>
-                    <button class="number toolbar--button toolbar--button__modifier">-5</button>
-                    <button class="number toolbar--button toolbar--button__modifier">-10</button>
+                    <button onclick="setValue.call(this, event, -1)"
+                            class="number toolbar--button toolbar--button__modifier">
+                        -1
+                    </button>
+                    <button onclick="setValue.call(this, event, -5)"
+                            class="number toolbar--button toolbar--button__modifier">
+                        -5
+                    </button>
+                    <button onclick="setValue.call(this, event, -10)"
+                            class="number toolbar--button toolbar--button__modifier">
+                        -10
+                    </button>
                 </div>
             </div>
             <div class="toolbar--buttons toolbar--buttons__center">
-                <button class="number toolbar--button">PRODUCE</button>
+                <button onclick="produce.call(this, event)"
+                        class="number toolbar--button">PRODUCE
+                </button>
             </div>
         </div>
     </div>
