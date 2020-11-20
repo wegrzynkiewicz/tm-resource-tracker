@@ -40,6 +40,14 @@
   max-width: 74px;
 }
 
+.number__button {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.number__button:active {
+  box-shadow: none;
+}
+
 @media (orientation: landscape) {
   .number__counter {
     font-size: 23px;
