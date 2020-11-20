@@ -148,6 +148,7 @@ window.resetStates = function (event) {
     for (const [name, resource] of Object.entries(resources)) {
         resource.restoreState(name);
     }
+    refreshModifiers();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
