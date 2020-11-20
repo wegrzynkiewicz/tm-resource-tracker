@@ -19,7 +19,9 @@
 }
 
 .resource--item__outline {
-  border-color: #e8e8e8 !important;
+  border-color: #ffffff !important;
+  border-radius: 10px;
+  box-shadow: inset 0 0 25px #ffffff;
 }
 
 .resource--item__production {
@@ -41,7 +43,6 @@
   flex-wrap: nowrap;
   justify-content: center;
   height: 100%;
-  padding: 1px 0;
 }
 
 .resource--production-bg {
