@@ -59,7 +59,7 @@ function refreshModifiers() {
 
 const resources = {
     points: {
-        minStateValue: 0,
+        minProductionValue: 0,
         restoreState(resource) {
             setCounterValue(`state-${resource}`, 20);
         },
@@ -67,7 +67,7 @@ const resources = {
         },
     },
     gold: {
-        minStateValue: -5,
+        minProductionValue: -5,
         restoreState,
         increaseStateByProduction(resource) {
             const productionValue = getCounterValue(`production-${resource}`);
@@ -76,22 +76,22 @@ const resources = {
         }
     },
     steel: {
-        minStateValue: 0,
+        minProductionValue: 0,
         restoreState,
         increaseStateByProduction
     },
     titan: {
-        minStateValue: 0,
+        minProductionValue: 0,
         restoreState,
         increaseStateByProduction
     },
     plant: {
-        minStateValue: 0,
+        minProductionValue: 0,
         restoreState,
         increaseStateByProduction
     },
     energy: {
-        minStateValue: 0,
+        minProductionValue: 0,
         restoreState,
         increaseStateByProduction(resource) {
             const stateValue = getCounterValue(`state-${resource}`);
@@ -101,7 +101,7 @@ const resources = {
         }
     },
     heat: {
-        minStateValue: 0,
+        minProductionValue: 0,
         restoreState,
         increaseStateByProduction
     },
@@ -116,11 +116,11 @@ window.setSelected = function setSelected(event, type, resource) {
     selectedCounterId = `${type}-${resource}`;
 
     switch (type) {
-        case 'production':
+        case 'state':
             minCounterValue = 0;
             break;
-        case 'state':
-            minCounterValue = resources[resource].minStateValue;
+        case 'production':
+            minCounterValue = resources[resource].minProductionValue;
             break;
     }
 
