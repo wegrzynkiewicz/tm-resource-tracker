@@ -41,7 +41,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   height: 100%;
-  padding: 4px 0;
+  padding: 1px 0;
 }
 
 .resource--production-bg {
@@ -52,7 +52,7 @@
   border-collapse: collapse;
   background: linear-gradient(135deg, rgba(127, 70, 35, 1) 0%, rgba(147, 94, 44, 1) 100%);
   height: 100%;
-  padding: 3px;
+  padding: 1px;
   width: 100%;
 }
 
@@ -60,6 +60,11 @@
   background-repeat: repeat;
   background-size: 100px 100px;
   height: 100%;
+}
+
+.resource--production-box {
+  background-size: 58px 51px;
+  padding: 6px 3px;
 }
 
 @media (orientation: landscape) {

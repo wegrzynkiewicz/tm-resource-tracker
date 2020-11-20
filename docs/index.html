@@ -9,9 +9,8 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Goldman&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%2B-"/>
 <script defer src="./main.js"></script><link href="./main.css" rel="stylesheet"><link rel="manifest" href="./manifest.bb45d2a03119343041627efd27b27101.json" crossorigin="anonymous" /></head>
-<body>
+<body class="bg__main-background">
 <div class="main">
-
     <div class="navbar">
         <div class="navbar--container">
             <div class="navbar--item navbar--logo">RESOURCE TRACKER</div>
@@ -45,7 +44,7 @@
                         <div onclick="setSelected.call(this, event, 'production', 'gold')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-gold"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -70,7 +69,7 @@
                         <div onclick="setSelected.call(this, event, 'production', 'steel')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-steel"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -95,7 +94,7 @@
                         <div onclick="setSelected.call(this, event, 'production', 'titan')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-titan"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -120,7 +119,7 @@
                         <div onclick="setSelected.call(this, event, 'production', 'plant')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-plant"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -145,7 +144,7 @@
                         <div onclick="setSelected.call(this, event, 'production', 'energy')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-energy"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -170,7 +169,7 @@
                         <div onclick="setSelected.call(this, event, 'production', 'heat')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-heat"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -232,7 +231,7 @@
             </div>
             <div class="toolbar--buttons toolbar--buttons__center">
                 <button onclick="produce.call(this, event)"
-                        class="number number__button toolbar--button">PRODUCE
+                        class="number number__button toolbar--button toolbar--button__produce">PRODUCE
                 </button>
             </div>
         </div>

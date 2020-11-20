@@ -9,9 +9,8 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Goldman&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%2B-"/>
 </head>
-<body>
+<body class="bg__main-background">
 <div class="main">
-
     <div class="navbar">
         <div class="navbar--container">
             <div class="navbar--item navbar--logo">RESOURCE TRACKER</div>
@@ -45,7 +44,7 @@
                         <div onclick="setSelected.call(this, event, 'production', '<%= resource %>')"
                              class="resource--item resource--item__production">
                             <div class="resource--production-bg">
-                                <div class="resource--buttons bg__production">
+                                <div class="resource--buttons resource--production-box bg__production">
                                     <label>
                                         <input id="production-<%= resource %>"
                                                class="number number__counter" name="resource" value="0" readonly/>
@@ -107,7 +106,7 @@
             </div>
             <div class="toolbar--buttons toolbar--buttons__center">
                 <button onclick="produce.call(this, event)"
-                        class="number number__button toolbar--button">PRODUCE
+                        class="number number__button toolbar--button toolbar--button__produce">PRODUCE
                 </button>
             </div>
         </div>

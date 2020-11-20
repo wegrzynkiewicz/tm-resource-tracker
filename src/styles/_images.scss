@@ -4,9 +4,12 @@
   background-image: url('../images/production.svg');
 }
 
-
 .bg__points {
   background-image: url('../images/tp.png');
+}
+
+.bg__main-background {
+  background-image: url('../images/bg.jpg');
 }
 
 @each $name, $options in $resources {
