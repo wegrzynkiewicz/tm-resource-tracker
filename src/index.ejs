@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Goldman&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%2B-"/>
 </head>
-<body class="bg__main-background">
+<body>
 <div class="main">
     <div class="navbar">
         <div class="navbar--container">
@@ -21,49 +21,51 @@
             <button class="navbar--item number number__button navbar--button">ABOUT</button>
         </div>
     </div>
-    <div class="resources">
-        <div class="resources--container">
-            <div class="resource resource__points">
-                <div class="resource--container">
-                    <div class="resource--item">
-                    </div>
-                    <div class="resource--item resource--icon bg__points">
-                    </div>
-                    <div onclick="setSelected.call(this, event, 'state', 'points')"
-                         class="resource--item resource--buttons resource--state">
-                        <label>
-                            <input id="state-points"
-                                   class="number number__counter" name="resource" value="20" readonly/>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <% for (const [resource,] of Object.entries(resources)) { %>
-                <div class="resource">
+    <div class="resources bg__main-background">
+        <div class="resources--wrapper">
+            <div class="resources--container">
+                <div class="resource resource__points">
                     <div class="resource--container">
-                        <div onclick="setSelected.call(this, event, 'production', '<%= resource %>')"
-                             class="resource--item resource--item__production">
-                            <div class="resource--production-bg">
-                                <div class="resource--buttons resource--production-box bg__production">
-                                    <label>
-                                        <input id="production-<%= resource %>"
-                                               class="number number__counter" name="resource" value="0" readonly/>
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="resource--item">
                         </div>
-                        <div class="resource--item resource--icon bg__<%= resource %>">
+                        <div class="resource--item resource--icon bg__points">
                         </div>
-                        <div onclick="setSelected.call(this, event, 'state', '<%= resource %>')"
+                        <div onclick="setSelected.call(this, event, 'state', 'points')"
                              class="resource--item resource--buttons resource--state">
                             <label>
-                                <input id="state-<%= resource %>"
-                                       class="number number__counter" name="resource" value="0" readonly/>
+                                <input id="state-points"
+                                       class="number number__counter" name="resource" value="20" readonly/>
                             </label>
                         </div>
                     </div>
                 </div>
-            <% } %>
+                <% for (const [resource,] of Object.entries(resources)) { %>
+                    <div class="resource">
+                        <div class="resource--container">
+                            <div onclick="setSelected.call(this, event, 'production', '<%= resource %>')"
+                                 class="resource--item resource--item__production">
+                                <div class="resource--production-bg">
+                                    <div class="resource--buttons resource--production-box bg__production">
+                                        <label>
+                                            <input id="production-<%= resource %>"
+                                                   class="number number__counter" name="resource" value="0" readonly/>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resource--item resource--icon bg__<%= resource %>">
+                            </div>
+                            <div onclick="setSelected.call(this, event, 'state', '<%= resource %>')"
+                                 class="resource--item resource--buttons resource--state">
+                                <label>
+                                    <input id="state-<%= resource %>"
+                                           class="number number__counter" name="resource" value="0" readonly/>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
         </div>
     </div>
     <div class="toolbar">

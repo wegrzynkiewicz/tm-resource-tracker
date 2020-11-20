@@ -9,7 +9,20 @@
 }
 
 .bg__main-background {
-  background-image: url('../images/bg.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (orientation: portrait) {
+  .bg__main-background {
+    background-image: url('../images/bg-portrait.jpg');
+  }
+}
+
+@media (orientation: landscape) {
+  .bg__main-background {
+    background-image: url('../images/bg-landscape.jpg');
+  }
 }
 
 @each $name, $options in $resources {
