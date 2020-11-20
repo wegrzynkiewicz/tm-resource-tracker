@@ -29,6 +29,13 @@ function restoreState(resource) {
     setCounterValue(`production_${resource}`, 0);
 }
 
+function loadCounter(name) {
+    const value = parseInt(localStorage.getItem(name));
+    if (!isNaN(value)) {
+        setCounterValue(name, value);
+    }
+}
+
 const resources = {
     points: {
         restoreState(resource) {
@@ -61,7 +68,7 @@ const resources = {
         restoreState,
         increaseStateByProduction(resource) {
             const stateValue = getCounterValue(`state_${resource}`);
-            setCounterValue(`state_${resource}`, -stateValue);
+            setCounterValue(`state_${resource}`, 0);
             increaseStateByProduction(resource)
             addCounterValue('heat', stateValue);
         }
@@ -104,7 +111,7 @@ window.resetStates = function (event) {
 
 document.addEventListener('DOMContentLoaded', () => {
     for (const [name] of Object.entries(resources)) {
-        setCounterValue(`state_${name}`, localStorage.getItem(`state_${name}`));
-        setCounterValue(`production_${name}`, localStorage.getItem(`production_${name}`));
+        loadCounter(`state_${name}`);
+        loadCounter(`production_${name}`);
     }
 });
