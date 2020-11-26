@@ -8,25 +8,37 @@
   text-align: center;
   user-select: none;
   padding: 0 2px;
-}
+  text-transform: uppercase;
 
-.number__counter {
-  font-size: 28px;
-  margin: 1px 3px;
-  max-width: 74px;
-}
+  &__button {
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 40%);
 
-.number__button {
-  box-shadow: 2px 2px 3px rgb(0 0 0 / 40%);
-}
-
-.number__button:active {
-  box-shadow: none;
-}
-
-@media (orientation: landscape) {
-  .number__counter {
-    font-size: 23px;
-    max-width: 56px;
+    &:active {
+      box-shadow: none;
+    }
   }
+
+  &__counter {
+    font-size: 28px;
+    margin: 1px 3px;
+    max-width: 74px;
+
+    @media (orientation: landscape) {
+      & {
+        font-size: 23px;
+        max-width: 56px;
+      }
+    }
+  }
+
+  &__toolbar-button {
+    font-size: 20px;
+    padding: 0 8px;
+  }
+
+  &__toolbar-button-modifier {
+    min-width: 54px;
+    margin: 8px 4px;
+  }
+
 }

@@ -1,32 +1,3 @@
-@import "variables";
-
-.bg__production {
-  background-image: url('../images/production.svg');
-}
-
-.bg__points {
-  background-image: url('../images/tp.png');
-}
-
-.bg__main-background {
-  background-position: center center;
-  background-size: cover;
-}
-
-@media (orientation: portrait) {
-  .bg__main-background {
-    background-image: url('../images/bg-portrait.jpg');
-  }
-}
-
-@media (orientation: landscape) {
-  .bg__main-background {
-    background-image: url('../images/bg-landscape.jpg');
-  }
-}
-
-@each $name, $options in $resources {
-  .bg__#{$name} {
-    background-image: url("../images/#{$name}.svg");
-  }
+.background__production {
+  background-image: url('../images/production.inline.svg');
 }

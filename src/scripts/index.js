@@ -1,3 +1,5 @@
+import {detectWebpSupport} from "./detectWebpSupport";
+
 let selectedItem = null;
 let selectedCounterId = null;
 let minCounterValue = null;
@@ -157,3 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
         loadCounter(`production-${name}`);
     }
 });
+
+(async () => {
+    detectWebpSupport().catch(() => {
+        document.body.classList.remove('webp');
+    });
+})();

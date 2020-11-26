@@ -1,8 +1,11 @@
-@import "variables";
-@import "navbar";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 @import "number";
-@import "resource";
-@import "resources";
-@import "toolbar";
-@import "layout";
 @import "images";
