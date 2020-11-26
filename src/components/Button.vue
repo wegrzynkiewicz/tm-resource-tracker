@@ -3,7 +3,7 @@
         :id="id ? $shortcut(id) : null"
         v-bind="attributes"
         :class="[$styles.number, $styles.number__button, attributes.class]"
-    >{{ label }}</button>
+    >{{ $label(label) }}</button>
 </template>
 
 <script>

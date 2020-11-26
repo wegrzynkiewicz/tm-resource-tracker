@@ -1,4 +1,4 @@
-import {detectWebpSupport} from "./detectWebpSupport";
+import {detectWebpSupport} from "./helpers/detectWebpSupport";
 
 let selectedItem = null;
 let selectedCounterId = null;

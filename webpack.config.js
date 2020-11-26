@@ -8,7 +8,7 @@ const PrerenderSPAPlugin = require("prerender-spa-plugin");
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
-const {createShortcut} = require('./src/scripts/createShortcut');
+const {createShortcut} = require('./src/scripts/helpers/createShortcut');
 
 module.exports = function (env, options) {
 
@@ -34,7 +34,7 @@ module.exports = function (env, options) {
                 './src/scripts/index.js',
             ],
             prerender: [
-                './src/scripts/prerender.js',
+                './src/scripts/helpers/prerender.js',
             ],
         },
         module: {
