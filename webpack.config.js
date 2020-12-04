@@ -9,6 +9,37 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const {createShortcut} = require('./src/scripts/helpers/createShortcut');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+
+async function minifyCSS(data, inputMap) {
+
+    const cleanCSSOptions = {
+        sourceMap: false,
+        level: {
+            1: {
+                all: true,
+            },
+            2: {
+                all: true,
+            }
+        },
+    };
+
+    const CleanCSS = require('clean-css');
+    const [[filename, input]] = Object.entries(data);
+    const minifiedCss = await new CleanCSS(cleanCSSOptions).minify({
+        [filename]: {
+            styles: input,
+            sourceMap: inputMap,
+        },
+    });
+
+    return {
+        css: minifiedCss.styles,
+        warnings: minifiedCss.warnings,
+    };
+}
 
 module.exports = function (env, options) {
 
@@ -31,7 +62,7 @@ module.exports = function (env, options) {
     return {
         entry: {
             scripts: [
-                './src/scripts/index.js',
+                './src/scripts/tracker/index.js',
             ],
             prerender: [
                 './src/scripts/helpers/prerender.js',
@@ -51,12 +82,7 @@ module.exports = function (env, options) {
                     test: /\.s[ac]ss$/i,
                     exclude: /\.inline\.scss$/,
                     use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                publicPath: './',
-                            },
-                        },
+                        'vue-style-loader',
                         {
                             loader: 'css-loader',
                             options: {
@@ -114,11 +140,38 @@ module.exports = function (env, options) {
                         },
                     ],
                 },
+                {
+                    test: /\.js$/,
+                    exclude: [
+                        /node_modules/,
+                        /helpers/,
+                    ],
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                ['@babel/preset-env', {targets: "defaults"}],
+                            ],
+                        }
+                    }
+                }
             ],
         },
         output: {
             path: resolve(__dirname, 'docs'),
             filename: '[name].[contenthash:6].js',
+        },
+        optimization: {
+            minimize: true,
+            minimizer: [
+                new CssMinimizerPlugin({
+                    sourceMap: false,
+                    minify: minifyCSS,
+                }),
+                new TerserPlugin({
+                    extractComments: false,
+                }),
+            ],
         },
         plugins: [
             new CleanWebpackPlugin({}),
@@ -131,7 +184,7 @@ module.exports = function (env, options) {
                     appName: 'TM Resource Tracker',
                     appDescription: 'TM Resource Tracker',
                     appShortName: 'TM Resource Tracker',
-                    background: '#000',
+                    background: '#000000',
                     developerName: 'Unnamed',
                     developerURL: null,
                     display: 'fullscreen',
@@ -161,13 +214,13 @@ module.exports = function (env, options) {
             new MiniCssExtractPlugin({
                 filename: '[name].[contenthash:6].css',
             }),
-            // new PrerenderSPAPlugin({
-            //     staticDir: resolve(__dirname, 'docs'),
-            //     routes: ['/'],
-            //     renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
-            //         renderAfterDocumentEvent: 'prerender-ready',
-            //     })
-            // }),
+            new PrerenderSPAPlugin({
+                staticDir: resolve(__dirname, 'docs'),
+                routes: ['/'],
+                renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
+                    renderAfterDocumentEvent: 'prerender-ready',
+                })
+            }),
             new SpriteLoaderPlugin({
                 extract: true,
             }),

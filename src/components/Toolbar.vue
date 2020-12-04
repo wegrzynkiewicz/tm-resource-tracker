@@ -4,34 +4,34 @@
             <div :class="$style.groups">
                 <div class="toolbar--buttons toolbar--buttons__plus">
                     <Button
-                        :attributes="{...buttonAttributes, 'data-change': 1}"
+                        :attributes="{...modifierButtonAttributes, 'data-change': 1}"
                         id="modifier-plus-one"
                         label="+1"
                     />
                     <Button
-                        :attributes="{...buttonAttributes, 'data-change': 5}"
+                        :attributes="{...modifierButtonAttributes, 'data-change': 5}"
                         id="modifier-plus-five"
                         label="+5"
                     />
                     <Button
-                        :attributes="{...buttonAttributes, 'data-change': 10}"
+                        :attributes="{...modifierButtonAttributes, 'data-change': 10}"
                         id="modifier-plus-ten"
                         label="+10"
                     />
                 </div>
                 <div class="toolbar--buttons toolbar--buttons__minus">
                     <Button
-                        :attributes="{...buttonAttributes, 'data-change': -1}"
+                        :attributes="{...modifierButtonAttributes, 'data-change': -1}"
                         id="modifier-minus-one"
                         label="-1"
                     />
                     <Button
-                        :attributes="{...buttonAttributes, 'data-change': -5}"
+                        :attributes="{...modifierButtonAttributes, 'data-change': -5}"
                         id="modifier-minus-five"
                         label="-5"
                     />
                     <Button
-                        :attributes="{...buttonAttributes, 'data-change': -10}"
+                        :attributes="{...modifierButtonAttributes, 'data-change': -10}"
                         id="modifier-minus-ten"
                         label="-10"
                     />
@@ -40,7 +40,7 @@
             <div :class="[$style.buttons, $style.buttons__center]">
                 <Button
                     :attributes="{class: [$styles['number__toolbar-button']], 'data-produce': ''}"
-                    label="produce"
+                    label="Produce"
                 />
             </div>
         </div>
@@ -55,8 +55,9 @@ export default {
         Button,
     },
     computed: {
-        buttonAttributes() {
+        modifierButtonAttributes() {
             return {
+                disabled: 'disabled',
                 class: [
                     this.$styles['number__toolbar-button'],
                     this.$styles['number__toolbar-button-modifier'],

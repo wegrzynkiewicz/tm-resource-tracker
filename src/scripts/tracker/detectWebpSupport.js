@@ -1,6 +1,6 @@
 const feature = "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==";
 
-export async function detectWebpSupport() {
+export function detectWebpSupport() {
     return new Promise((resolve, reject) => {
         const image = new Image();
         image.onload = function () {

@@ -4,12 +4,10 @@ import {default as mainStyles} from '../../styles/main.scss';
 import {preloadImages} from "./preloadImages";
 import {createLabel} from "./createLabel";
 import {appendLink} from "./appendLink";
-import {createShortcut} from "./createShortcut";
 
 const $label = createLabel();
 
 async function bootstrap() {
-    Vue.prototype.$shortcut = createShortcut();
     Vue.prototype.$label = $label;
     Vue.prototype.$styles = {
         ...mainStyles,

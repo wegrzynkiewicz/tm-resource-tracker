@@ -1,6 +1,6 @@
-import {idGenerator} from "incstr";
+const {idGenerator} = require('incstr');
 
-export function createShortcut() {
+exports.createShortcut = () => {
     const shortcuts = new Map();
     const generator = idGenerator();
     return (name) => {

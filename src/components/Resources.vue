@@ -3,10 +3,11 @@
         <div :class="$style.wrapper">
             <div :class="$style.container">
                 <component
-                    v-for="resource of resources"
-                    v-bind:is="resource.component"
-                    :key="resource.name"
-                    v-bind="resource"
+                    v-for="{component, icon, name, position} of resources"
+                    v-bind:is="component"
+                    :key="position"
+                    :name="name"
+                    :icon="icon"
                 />
             </div>
         </div>
@@ -18,8 +19,7 @@ import energy from "../images/energy.sprite.svg";
 import gold from "../images/gold.sprite.svg";
 import heat from "../images/heat.sprite.svg";
 import plant from "../images/plant.sprite.svg";
-import points from "../images/points.conv.png";
-import pointsWebp from "../images/points.conv.png?webp";
+import points from "../images/points.sprite.svg";
 import steel from "../images/steel.sprite.svg";
 import titan from "../images/titan.sprite.svg";
 import BasicResource from "./resources/BasicResource";
@@ -31,23 +31,62 @@ export default {
             resources: [
                 {
                     name: 'points',
+                    position: 0,
                     component: PointsResource,
                     icon: {
-                        url: points,
-                        sources: [
-                            {
-                                attributes: {
-                                    type: 'image/webp',
-                                    srcset: pointsWebp,
-                                }
-                            }
-                        ],
+                        url: points.url,
+                        sources: [],
                         width: 64,
-                        height: 47,
+                        height: 64,
                     }
                 },
                 {
                     name: 'gold',
+                    position: 1,
+                    component: BasicResource,
+                    icon: {
+                        url: gold.url,
+                        sources: [],
+                        width: 64,
+                        height: 64,
+                    },
+                },
+                {
+                    name: 'steel',
+                    position: 2,
+                    component: BasicResource,
+                    icon: {
+                        url: steel.url,
+                        sources: [],
+                        width: 64,
+                        height: 64,
+                    },
+                },
+                {
+                    name: 'titan',
+                    position: 3,
+                    component: BasicResource,
+                    icon: {
+                        url: titan.url,
+                        sources: [],
+                        width: 64,
+                        height: 64,
+                    },
+                },
+                {
+                    name: 'plant',
+                    position: 4,
+                    component: BasicResource,
+                    icon: {
+                        url: plant.url,
+                        sources: [],
+                        width: 64,
+                        height: 64,
+                    },
+                },
+                {
+                    name: 'energy',
+                    position: 5,
                     component: BasicResource,
                     icon: {
                         url: energy.url,
@@ -58,49 +97,10 @@ export default {
                 },
                 {
                     name: 'heat',
-                    component: BasicResource,
-                    icon: {
-                        url: gold.url,
-                        sources: [],
-                        width: 64,
-                        height: 64,
-                    },
-                },
-                {
-                    name: 'titan',
+                    position: 6,
                     component: BasicResource,
                     icon: {
                         url: heat.url,
-                        sources: [],
-                        width: 64,
-                        height: 64,
-                    },
-                },
-                {
-                    name: 'plant',
-                    component: BasicResource,
-                    icon: {
-                        url: plant.url,
-                        sources: [],
-                        width: 64,
-                        height: 64,
-                    },
-                },
-                {
-                    name: 'steel',
-                    component: BasicResource,
-                    icon: {
-                        url: steel.url,
-                        sources: [],
-                        width: 64,
-                        height: 64,
-                    },
-                },
-                {
-                    name: 'energy',
-                    component: BasicResource,
-                    icon: {
-                        url: titan.url,
                         sources: [],
                         width: 64,
                         height: 64,

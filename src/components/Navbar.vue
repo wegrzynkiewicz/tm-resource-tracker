@@ -6,7 +6,7 @@
             >{{ $label('Resource Tracker') }}</div>
             <Button
                 :attributes="{'class': $style.button, 'data-reset':''}"
-                label="reset"
+                label="Reset"
             />
         </div>
     </div>
@@ -44,7 +44,7 @@ export default {
 .logo {
     color: #ffffff;
     flex-grow: 10;
-    font-family: Goldman, monospace;
+    font-family: Goldman, sans-serif;
     text-shadow: 2px 2px 2px #291202;
     text-transform: uppercase;
 }

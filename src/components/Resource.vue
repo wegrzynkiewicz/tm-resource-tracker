@@ -5,8 +5,9 @@
             <div :class="$style.item">
                 <slot name="production-item">
                     <div
-                        :class="$style.counters"
-                        :data-production="name"
+                        :class="$style.selectable"
+                        data-type="production"
+                        :data-resource="name"
                     >
                         <Production
                             :name="name"
@@ -25,10 +26,11 @@
 
             <div :class="$style.item">
                 <div
-                    :class="$style.counters"
-                    :data-state="name"
+                    :class="$style.selectable"
+                    data-type="state"
+                    :data-resource="name"
                 >
-                    <Counter :id="stateId"/>
+                    <Counter :id="state"/>
                 </div>
             </div>
         </div>
@@ -47,7 +49,7 @@ export default {
         Production,
     },
     computed: {
-        stateId() {
+        state() {
             return `state_${this.name}`;
         },
     },
@@ -78,25 +80,23 @@ export default {
 
 .item {
     flex-basis: 33.333333%;
-    border-width: 3px;
-    border-style: solid;
-    border-color: transparent;
     height: 100%;
     width: 100%;
 }
 
-.item__outline {
-    border-color: #ffffff !important;
-    border-radius: 10px;
-    box-shadow: inset 0 0 25px #ffffff;
-}
-
-.counters {
+.selectable {
     align-items: center;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     height: 100%;
+    padding: 6px;
+}
+
+:global .resource--selectable__outline {
+    border-color: #ffffff !important;
+    border-radius: 10px;
+    box-shadow: inset 0 0 25px #ffffff;
 }
 
 </style>
