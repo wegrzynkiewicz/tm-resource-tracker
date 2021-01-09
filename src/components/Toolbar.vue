@@ -2,7 +2,7 @@
     <div :class="$style.root">
         <div :class="$style.container">
             <div :class="$style.groups">
-                <div class="toolbar--buttons toolbar--buttons__plus">
+                <div :class="[$style.buttons, $style.buttons__plus]">
                     <Button
                         :attributes="{...modifierButtonAttributes, 'data-change': 1}"
                         id="modifier-plus-one"
@@ -19,7 +19,7 @@
                         label="+10"
                     />
                 </div>
-                <div class="toolbar--buttons toolbar--buttons__minus">
+                <div :class="[$style.buttons, $style.buttons__minu]">
                     <Button
                         :attributes="{...modifierButtonAttributes, 'data-change': -1}"
                         id="modifier-minus-one"
@@ -109,10 +109,10 @@ export default {
             position: absolute;
         }
         &__minus {
-            order: 1
+            order: 2
         }
         &__plus {
-            order: 2
+            order: 1
         }
     }
 }
