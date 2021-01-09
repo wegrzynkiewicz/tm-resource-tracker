@@ -1,8 +1,0 @@
-{
-  "name": "TM Resource Tracker",
-  "short_name": "TM Resource Tracker",
-  "orientation": "any",
-  "display": "fullscreen",
-  "start_url": "/tm-resource-tracker/index.html",
-  "background_color": "#000000"
-}

@@ -41,7 +41,7 @@ async function minifyCSS(data, inputMap) {
     };
 }
 
-module.exports = function (env, options) {
+module.exports = function (env, options = {}) {
 
     const mode = options.mode || 'development';
     const isProd = mode === 'production';
@@ -82,7 +82,7 @@ module.exports = function (env, options) {
                     test: /\.s[ac]ss$/i,
                     exclude: /\.inline\.scss$/,
                     use: [
-                        'vue-style-loader',
+                        MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader',
                             options: {
@@ -158,7 +158,7 @@ module.exports = function (env, options) {
             ],
         },
         output: {
-            path: resolve(__dirname, 'docs'),
+            path: resolve(__dirname, 'dist'),
             filename: '[name].[contenthash:6].js',
         },
         optimization: {
@@ -215,7 +215,7 @@ module.exports = function (env, options) {
                 filename: '[name].[contenthash:6].css',
             }),
             new PrerenderSPAPlugin({
-                staticDir: resolve(__dirname, 'docs'),
+                staticDir: resolve(__dirname, 'dist'),
                 routes: ['/'],
                 renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
                     renderAfterDocumentEvent: 'prerender-ready',
