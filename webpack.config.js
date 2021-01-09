@@ -179,7 +179,7 @@ module.exports = function (env, options = {}) {
                 cache: true,
                 logo: resolve(__dirname, 'src/icons/logo_512.png'),
                 publicPath: '',
-                prefix: 'f/',
+                prefix: './',
                 favicons: {
                     appName: 'TM Resource Tracker',
                     appDescription: 'TM Resource Tracker',
