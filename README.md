@@ -2,7 +2,7 @@
 
 A simple and convenient browser application for quick resource management in the popular board game called Terraforming Mars.
 
-It uses localstorage to store the entertainment state, so you can disable the application.
+It uses localstorage to store the entertainment state, so you can disable the application without worrying about losing the state.
 
 ## Demo
 
