@@ -15,16 +15,18 @@ export class Counter {
         }
     }
 
-    changeValue(value) {
-        this.value += value;
+    set(value) {
+        this.value = value;
         this.save();
         this.bind();
     }
 
+    changeValue(value) {
+        this.set(this.value + value);
+    }
+
     reset() {
-        this.value = this.initial;
-        this.save();
-        this.bind();
+        this.set(this.initial);
     }
 
     save() {

@@ -36,8 +36,7 @@ export function loadResources() {
         name: 'energy',
         increaseStateByProduction() {
             heat.state.changeValue(this.state.value);
-            this.state.value = this.production.value;
-            this.state.bind();
+            this.state.set(this.production.value);
         },
     });
 
